@@ -1,16 +1,8 @@
-# This is a sample Python script.
+# insert into question (subject, content) values('안녕하세요', '가입인사드립니다^^')
+# insert into question (subject, content) values ('질문 있습니다.', 'ORM이 궁금합니다')
+#
+# question1 = Question(subject='안녕하세요', content='가입 인사드립니다^^')
+# db.session.add(quests1)
+# question2 = Qeustion(subject='질문 있습니다.', content='ORM이 궁금합니다')
+# db.sesseion.add(question2)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

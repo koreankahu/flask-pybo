@@ -1,12 +1,25 @@
 from flask import Flask
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
+import config
+
+db = SQLAlchemy()
+migrate = Migrate()
 
 def create_app():
     app = Flask(__name__)
 
-    @app.route("/")
-    def hello_pybo():
-        return 'Hello pybo2!'
+    from .views import main_views
 
+
+    # ORM
+    db.init_app(app)
+    migrate.init_app(app, db)
+    from . import models
+
+    # 블루프린트
+    app.register_blueprint(main_views.bp)   # app에 블루 프린트 객체 bp 등록
+    app.config.from_object(config)
     return app
 
